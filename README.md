@@ -53,8 +53,19 @@ Senha: placeti <br>
         "ativo": true
   }
   ```
-
-
-
+* Modelo:
+  ```
+  {
+    "nome": "X1",
+    "ano": "2022",
+    "ativo": true,
+    "marca": {
+            "id": 102,
+            "nome": "BMW",
+            "codigoDenatran": "123",
+            "ativo": true
+            }
+}
+  ```
 
 
