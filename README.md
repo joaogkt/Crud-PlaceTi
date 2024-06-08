@@ -15,6 +15,14 @@ A API utiliza autenticação Basic Auth para acessar os endpoints. As credenciai
 Usuário: placeti <br>
 Senha: placeti <br>
 
+# Instruções de uso
+
+* Certifique-se de ter o Docker instalado.
+* Clone o repositório do projeto.
+* Navegue até o diretório do projeto e execute ```docker-compose up -d``` para iniciar o banco de dados PostgreSQL.
+* Execute a aplicação Spring Boot.
+* Utilize os endpoints da API conforme documentado acima, autenticando-se com as credenciais fornecidas.
+
 # Endpoints Disponíveis
 
 ### GET
@@ -34,17 +42,15 @@ Senha: placeti <br>
 ### DELETE
 * Deleta uma marca pelo ID: **/api/marcas/{id}**
 * Deleta um modelo pelo ID: **/api/modelos/{id}**
+  
+## Exemplo de Requisição
 
-# Instruções de uso
-
-* Certifique-se de ter o Docker instalado.
-* Clone o repositório do projeto.
-* Navegue até o diretório do projeto e execute ```docker-compose up -d``` para iniciar o banco de dados PostgreSQL.
-* Execute a aplicação Spring Boot.
-* Utilize os endpoints da API conforme documentado acima, autenticando-se com as credenciais fornecidas.
-
-
-
+* Marca:
+  ``` {
+        "nome": "Renault",
+        "codigoDenatran": "123456",
+        "ativo": true
+    } ```
 
 
 
