@@ -43,7 +43,7 @@ Senha: placeti <br>
 * Deleta uma marca pelo ID: **/api/marcas/{id}**
 * Deleta um modelo pelo ID: **/api/modelos/{id}**
   
-## Exemplo de Requisição
+## Exemplo do corpo da requisição POST
 
 * Marca:
   ```
