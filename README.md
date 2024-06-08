@@ -20,9 +20,33 @@ Senha: placeti <br>
 ### GET
 * Lista todas as marcas: **/api/marcas**
 * Retorna detalhes de uma marca específica pelo ID: **/api/marcas/{id}**
-* Lista todos os modelos: **/api/modelos **
-* Retorna detalhes de um modelo específico pelo ID: **/api/modelos/{id} **
+* Lista todos os modelos: **/api/modelos**
+* Retorna detalhes de um modelo específico pelo ID: **/api/modelos/{id}**
 
 ### POST
 * Cria uma nova marca: **/api/marcas** 
-* Cria um novo modelo: **/api/modelos **
+* Cria um novo modelo: **/api/modelos**
+
+### PUT (Update)
+* Atualiza uma marca existente pelo ID: **/api/marcas/{id}**
+* Atualiza um modelo existente pelo ID: **/api/modelos/{id}**
+
+### DELETE
+* Deleta uma marca pelo ID: **/api/marcas/{id}**
+* Deleta um modelo pelo ID: **/api/modelos/{id}**
+
+# Instruções de uso
+
+* Certifique-se de ter o Docker instalado.
+* Clone o repositório do projeto.
+* Navegue até o diretório do projeto e execute docker-compose up -d para iniciar o banco de dados PostgreSQL.
+* Execute a aplicação Spring Boot.
+* Utilize os endpoints da API conforme documentado acima, autenticando-se com as credenciais fornecidas.
+
+
+
+
+
+
+
+
