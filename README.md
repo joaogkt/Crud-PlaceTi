@@ -66,6 +66,3 @@ Senha: placeti <br>
             "ativo": true
             }
 }
-  ```
-
-
