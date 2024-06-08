@@ -22,3 +22,7 @@ Senha: placeti <br>
 * Retorna detalhes de uma marca específica pelo ID: /api/marcas/{id}
 * Lista todos os modelos: /api/modelos 
 * Retorna detalhes de um modelo específico pelo ID: /api/modelos/{id} 
+
+### POST
+* /api/marcas: Cria uma nova marca.
+* /api/modelos: Cria um novo modelo.
