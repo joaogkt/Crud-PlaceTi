@@ -14,3 +14,11 @@ Este projeto implementa um CRUD (Create, Read, Update, Delete) para as entidades
 A API utiliza autenticação Basic Auth para acessar os endpoints. As credenciais de autenticação são: <br>
 Usuário: placeti <br>
 Senha: placeti <br>
+
+# Endpoints Disponíveis
+
+<h3> GET </h3>
+* /api/marcas: Lista todas as marcas.
+* /api/marcas/{id}: Retorna detalhes de uma marca específica pelo ID.
+* /api/modelos: Lista todos os modelos.
+* /api/modelos/{id}: Retorna detalhes de um modelo específico pelo ID.
