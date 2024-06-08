@@ -18,7 +18,7 @@ Senha: placeti <br>
 # Endpoints Disponíveis
 
 <h3> GET </h3>
-- /api/marcas: Lista todas as marcas.
-- /api/marcas/{id}: Retorna detalhes de uma marca específica pelo ID.
-- /api/modelos: Lista todos os modelos.
-- /api/modelos/{id}: Retorna detalhes de um modelo específico pelo ID.
+* Lista todas as marcas: /api/marcas
+* Retorna detalhes de uma marca específica pelo ID: /api/marcas/{id}
+* Lista todos os modelos: /api/modelos 
+* Retorna detalhes de um modelo específico pelo ID: /api/modelos/{id} 
