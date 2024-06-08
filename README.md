@@ -46,11 +46,13 @@ Senha: placeti <br>
 ## Exemplo de Requisição
 
 * Marca:
-  ``` {
+  ```
+  {
         "nome": "Renault",
         "codigoDenatran": "123456",
         "ativo": true
-    } ```
+  }
+  ```
 
 
 
