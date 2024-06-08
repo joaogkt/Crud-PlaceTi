@@ -39,7 +39,7 @@ Senha: placeti <br>
 
 * Certifique-se de ter o Docker instalado.
 * Clone o repositório do projeto.
-* Navegue até o diretório do projeto e execute docker-compose up -d para iniciar o banco de dados PostgreSQL.
+* Navegue até o diretório do projeto e execute ```docker-compose up -d``` para iniciar o banco de dados PostgreSQL.
 * Execute a aplicação Spring Boot.
 * Utilize os endpoints da API conforme documentado acima, autenticando-se com as credenciais fornecidas.
 
