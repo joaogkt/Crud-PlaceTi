@@ -8,3 +8,9 @@ Este projeto implementa um CRUD (Create, Read, Update, Delete) para as entidades
 * Spring Framework
 * Banco de Dados PostgreSQL
 * Docker
+
+# Autenticação da API
+
+A API utiliza autenticação Basic Auth para acessar os endpoints. As credenciais de autenticação são: <br>
+Usuário: placeti <br>
+Senha: placeti <br>
