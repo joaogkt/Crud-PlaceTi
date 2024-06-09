@@ -13,7 +13,7 @@ public class Marca {
     private String codigoDenatran;
     private boolean ativo;
 
-    @OneToMany(mappedBy = "marca")
+    @OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Modelo> modelos;
     public Marca() {}
     public Marca(String nome, String codigoDenatran, boolean ativo) {}
