@@ -2,6 +2,7 @@ package org.example.crudplaceti.controller;
 
 import org.example.crudplaceti.exception.ResourceNotFoundException;
 import org.example.crudplaceti.models.Marca;
+import org.example.crudplaceti.models.Modelo;
 import org.example.crudplaceti.repository.MarcaRepository;
 import org.example.crudplaceti.services.MarcaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,15 +53,24 @@ public class MarcaController {
         }
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<Marca> deleteMarca(@PathVariable int id) {
+    public ResponseEntity<String> deleteMarca(@PathVariable int id) {
         try{
-            marcaService.deleteMarca(id);
-            return new ResponseEntity<>(HttpStatus.OK);
+            Marca marca = marcaService.getMarcaById(id);
+            System.out.println(marca);
+            if (marca == null){
+                return ResponseEntity.notFound().build();
+            }
+            else {
+                marcaService.deleteMarca(id);
+                return ResponseEntity.ok("Marca delete successfully.");
+            }
+
         } catch (ResourceNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         } catch (ResponseStatusException e) {
             if (e.getMessage().contains("Marca not found")){
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("Marca not found.");
             }
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

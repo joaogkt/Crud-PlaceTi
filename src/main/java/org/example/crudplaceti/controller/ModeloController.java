@@ -63,15 +63,25 @@ public class ModeloController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Marca> deleteModelo(@PathVariable int id) {
+    public ResponseEntity<String> deleteModelo(@PathVariable int id) {
         try{
-            modeloService.deleteModelo(id);
-            return new ResponseEntity<>(HttpStatus.OK);
+            Modelo modelo = modeloService.getModeloById(id);
+            System.out.println(modelo);
+            if (modelo == null){
+                return ResponseEntity.notFound().build();
+            }
+            else {
+                modeloService.deleteModelo(id);
+                return ResponseEntity.ok("Modelo delete successfully.");
+            }
+
         } catch (ResourceNotFoundException e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Modelo not found.");
         } catch (ResponseStatusException e) {
             if (e.getMessage().contains("Modelo not found")){
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("Modelo not found.");
             }
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

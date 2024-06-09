@@ -5,14 +5,14 @@ import jakarta.persistence.*;
 @Entity
 public class Modelo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String nome;
     private int ano;
     private boolean ativo;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "marca_id")
     private Marca marca;
 

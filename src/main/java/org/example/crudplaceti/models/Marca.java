@@ -7,13 +7,13 @@ import java.util.List;
 @Entity
 public class Marca {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String nome;
     private String codigoDenatran;
     private boolean ativo;
 
-    @OneToMany(mappedBy = "marca")
+    @OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Modelo> modelos;
     public Marca() {}
     public Marca(String nome, String codigoDenatran, boolean ativo) {}
